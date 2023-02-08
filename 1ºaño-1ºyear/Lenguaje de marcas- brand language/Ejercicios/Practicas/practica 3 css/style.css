@@ -1,0 +1,24 @@
+.derecha{
+	float: right	;
+	font-family: cursive;
+}
+.izquierda{
+	float: left;
+	font-family: fantasy;
+}
+.escritor{
+text-align: CENTER;
+font-family: sans-serif;
+}
+.texto{
+
+}
+.arreglar{
+	clear: both;
+}
+.texto{
+	width: 65%;
+}
+.img{
+	width: 35%;
+}

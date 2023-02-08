@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="BandasMusicales">
+        <xs:complextype>
+            <xs:sequence>
+                <xs:element>
+                    <xs:element name="musica">
+                        <xs:complextipe>
+                            <xs:sequence>
+                                <xs:element name="album">
+                                    <xs:complextype>
+                                        <xs:sequence>
+                                            <xs:element name="titulo" type="string"/>
+                                            <xs:element name="" type="string"/>
+                                            <xs:element name="single" type="string"/>
+                                            <xs:element name="titulo" type="string"/>
+                                        </xs:sequence>
+                                    </xs:complextype>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complextipe>
+                </xs:element>
+            </xs:sequence>
+        </xs:complextype>
+    </xs:element>
+</xs:schema>

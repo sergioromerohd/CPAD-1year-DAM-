@@ -1,0 +1,18 @@
+UPDATE albumes
+    SET portada = '25.jpg'
+    WHERE cod_album=25;
+UPDATE albumes
+    SET portada = '26.jpg'
+    WHERE cod_album=26;
+UPDATE albumes
+    SET portada = '27.jpg'
+    WHERE cod_album=27;
+UPDATE albumes
+    SET portada = '28.jpg'
+    WHERE cod_album=28;
+UPDATE grupos
+    SET foto = '13.jpg'
+    WHERE cod_album=13;
+UPDATE grupos
+    SET foto = '14.jpg'
+    WHERE cod_album=14;

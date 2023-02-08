@@ -1,0 +1,32 @@
+preguntas tipo test BBDD  			Sergio Romero
+
+1º¿cual es la relacion que se establece en una base de datos de una tienda de ropa entre
+los pedidos y los productos?1ºpedidos 2ºproductos:
+	-1:1
+	-1:N
+	-M:1
+	-M:N
+
+2º que es un Modelo de entidad relacion?
+	-Un modelo entidad-relación es una herramienta para el modelo de datos, la cual facilita la representación de entidades de una base de datos
+	-Un modelo entidad-relación es una herramienta para organizar de una forma grafica un conjunto de ideas
+	-Un modelo entidad-relación es un programa que simplifica la tarea de un programador
+	-todas son correctas
+
+3º ¿los ficheros que tipo de sistema deinformacion es?
+	-sistema de la informacion orientado a datos
+	-sistema de la informacion orientada a carpetas
+	-sistema de la informacion orientado a procesos
+	-ninguna es correcta
+
+4ºcual no es una caracteristica de los procesos
+	-redundancia
+	-aumento en el tiempo de proceso
+	-se puede utilizar texto plano
+	-necesita un sistema gestor de base de datos
+
+5ºfunciones de un sistema gestor de base de datos
+	-altas y bajas
+	-modificaciones
+	-busquedas 
+	-todas son correctas

@@ -1,0 +1,93 @@
+body{
+	background: url(./img/nenufar.jpg) no-repeat,url(./img/arbol.jpg) bottom right no-repeat;
+	display: flex;
+}
+div{
+
+}
+h4{
+	margin: 0 0 0 0;
+	color: #b4ae8e;
+	font-family: cursive;
+}
+.main{
+	width: 100%;
+	display: flex;
+}
+.izquierda{
+width: 120px;
+flex-wrap: wrap;
+}
+.derecha{
+	width: 150px;
+	flex-wrap: wrap;
+	padding: 1% 0 0 0 ;
+}
+.centro{
+	flex-wrap: wrap;
+	width: 85%;
+	margin: 7PX 1PX 0 10PX;
+}
+.logo{
+	padding: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+.intro{
+	padding: 0 0 0 0;
+	width: 100%;
+	display: flex;
+}
+div .centro div.izquierda{
+	width: 17%;
+	text-align: center;
+	padding: 3% 1% 0 1%;
+	font-style: italic;
+}
+div .centro div.derecha{
+	width: 100%;
+}
+.cuerpo{
+	padding: 1% 3% 0 3%;
+}
+.cuadro{
+	padding: 5%5%5%5%;
+	background-color: #E6DEB4;
+	margin: 0 10% 0 3%;
+	display: flex;
+	flex-direction: column;
+	font-size: 11PX;
+	font font-family: cursive sans-serif;
+	text-align: center;
+	border-radius: 5px;
+}
+div.cuadro div{
+	border-bottom: 2px solid #b4ae8e;
+	padding: 4px 0 4px 0;
+	
+}
+div.cuadro div a{
+	text-decoration: none;
+	color: #AFA46A;
+}
+div.cuadro div a:hover {
+	transition: 0.3s;
+	font-weight: bold;
+	color: indianred;
+	position: relative;
+}
+.final{
+	font-family: cursive;
+	color: lightpink;
+	padding: 0 25% 0 25%;
+	text-align: center;
+	display: flex;
+	flex-flow: ;
+	justify-content: space-around;
+}
+.letra{
+	color: lightpink;
+	font-family: cursive;
+}

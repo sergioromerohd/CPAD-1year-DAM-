@@ -1,0 +1,33 @@
+package EjerciciosTema2;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	
+	private static void sabersiprimo() {
+		for (int i = 1; i <=rdm; i++) {
+			if (divisoresexactos) {
+				
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner t = new Scanner(System.in);
+		int tamano=0,rango,min,max,rdm=0,divisoresexactos;
+		boolean semaforo=false;
+		//pedir el tamaño del resultado
+		System.out.println("¿Tamaño del resultado?");
+		tamano=t.nextInt();
+		//hacer la matriz resultado
+		int resultado[]=new int[tamano-1];
+		System.out.println("¿Desde que numero quieres sacar numeros primos?");
+		min=t.nextInt();
+		System.out.println("¿hasta?");
+		max=t.nextInt();
+		rango=max-min;
+		
+	}
+
+}

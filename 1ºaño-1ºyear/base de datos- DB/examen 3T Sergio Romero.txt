@@ -1,0 +1,111 @@
+1- listado de peliculas y su fecha con ordenacion cronologica ascendente
+
+	SELECT titulo, fecha FROM peliculas ORDER BY fecha;
+
+	bien +1
+
+
+2-listado de fechas en las que hay alguna pelicula
+
+
+	SELECT distinct(fecha) from peliculas ORDER BY fecha;
+
+
+	Bien +1
+
+
+3-Lista que muestre  cuantas peliculas tenemos de cada año, ordenadas por el numero de peliculas
+
+
+	select count(cod_pelicula) as "numero de peliculas",fecha from peluculas group by fecha order by 1;
+
+	Bien +1
+
+
+4-listado de peliculas del genero accion, aventuras, suspense, con ordenacion alfabetica ascendente
+
+
+
+	SELECT titulo FROM peliculas,generos,peliculas_generos 
+	WHERE peliculas.cod_pelicula=peliculas_generos.cod_pelicula 
+	AND generos.cod_genero=peliculas_generos.cod_genero 
+	AND (genero="accion" OR genero="aventuras" OR genero="suspense")ORDER BY 1;
+
+
+	MAL 0
+
+
+5-listado de peliculas en las que actua tom cruise, ordenadas cronologicamente
+
+
+	SELECT titulo FROM peliculas,peliculas_personas,personas 
+	WHERE peliculas.cod_pelicula=peliculas_personas.cod_pelicula 
+	AND personas.cod_persona=peliculas_personas.cod_persona 
+	AND nombre="Tom" AND apellidos="Cruise" 
+	AND rol="Actor" 
+	ORDER BY fecha;
+
+
+	Bien +1
+
+
+6-listado de peliculas y quien o quienes la dirigen ordenado alfabeticaente
+
+
+	SELECT titulo, nombre FROM peliculas,peliculas_personas,personas 
+	WHERE peliculas.cod_pelicula=peliculas_personas.cod_pelicula 
+	AND personas.cod_persona=peliculas_personas.cod_persona  
+	AND (rol="Director" OR rol="Directora")
+	ORDER BY 1;
+
+	MAL 0 
+	
+
+
+7-listado de peliculas que tengan algun genero asociado, con ordenacion alfabetica
+
+
+	SELECT titulo FROM peliculas, peliculas_generos 
+	where peliculas.cod_pelicula=peliculas_generos.cod_pelicula 
+	ORDER BY 1;
+
+
+	mal 0 	
+
+
+8-crea una vista que solo permita acceder al nombre , apellidos y fecha de nacimiento de una persona
+
+
+	create view nombre_apellidos_fecnac as 
+		select nombre,apellidos,fec_nac from personas 
+		order by 1;
+
+
+
+	Bien +1
+
+9-Procedimiento almacenado que sirva para obtener un listado de peliculas (ordenado cronologicamente) en las que actua una persona determinada.
+
+	CREATE PROCEDURE peliculas_de_actor(nombre_p varchar(50), apellidos_p varchar(50)) 
+	SELECT titulo FROM peliculas,peliculas_personas,personas 
+	WHERE peliculas.cod_pelicula=peliculas_personas.cod_pelicula 
+	AND personas.cod_persona=peliculas_personas.cod_persona 
+	AND nombre=nombre_p 
+	AND apellidos=apellidos_p AND (rol="Actor" OR rol"Actriz")
+	order by 1;
+
+	Bien +1
+
+10-
+
+
+	A)CALL peliculas_de_actor("Tom","Cruise");
+
+	Bien +0.5
+
+	B)DROP PROCEDURE IF EXISTS peliculas_de_actor;
+
+	Bien +0.5	
+	
+	
+	

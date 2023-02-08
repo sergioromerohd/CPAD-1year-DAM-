@@ -1,0 +1,54 @@
+DML AUTORES 
+
+INSERT INTO personas VALUES
+(138, "Steven", "Soderberg", "Estadounidense", "cinematográfico, guionista, director de fotografía, editor y director de cine estadounidense. Ganó el Premio Óscar al mejor director en 2000 por la película Traffic.", "138.jpg", "1963"),
+(54, "George", "Clooney", "Estadounidense", "Clooney nació en la ciudad de Lexington en 1961. Su madre fue reina de la belleza y concejal, mientras que su padre, Nick Clooney, era presentador de televisión en la AMC, muy popular en Cincinnati. La ascendencia de Clooney incluye raíces escocesas, neerlandesas, alemanas, inglesas y españolas.", "54.jpg", "1961"),
+(16, "Brad", "Pitt", "Estadounidense", "Hijo de una maestra y del manager de una empresa de camiones, se crió en Springfield, Missouri, donde se graduó en la High School de Kickapoo. Cursó periodismo en la Universidad de Columbia, Missouri, pero abandonó los estudios y se trasladó a California con la intención de ser actor.", "16.jpg", 1963),
+(93, "Matt", "Damon", "Estadounidense", "Damon fue adquiriendo notoriedad en la industria tras protagonizar exitosas películas en crítica y taquilla como Saving Private Ryan (1998), Dogma (1999) y The Talented Mr.", "93.jpg", 1970),
+(40, "Don", "Cheadle", "Estadounidense", "es un actor y productor de cine y televisión estadounidense.", "40.jpg", 1964),
+(131, "Scott", "Caan", "Estadounidense", "Scott Andrew Caan es un actor estadounidense. Es conocido por su papel como Danny Williams en la serie de televisión Hawaii Five-0, por el que fue nominado para un Globo de Oro. Es hijo del actor James Caan.",'131.jpg', 1976),
+(23, "Casey", "Affleck", "Estadounidense", "es un actor estadounidense, ganador de un Premio Óscar, un Globo de Oro y un BAFTA.",'23.jpg', 1975),
+(45, "Elliott", "Gould", "Estadounidense", "Gould nació y fue registrado como Elliott Goldstein en Brooklyn, Nueva York. Es nieto de inmigrantes judíos de Europa Oriental.",'45.jpg', 1938),
+(21, "Carl", "Reiner", "Estadounidense", "Fue soldado en la II Guerra Mundial en el Ejército de Estados Unidos en una compañía itinerante de artistas. Posteriormente decide dedicarse plenamente a su carrera de actor. Trabajó en Broadway y formó un exitoso dúo cómico con otra leyenda de la comedia, Mel Brooks. Trabajó en el show de Dick van Dyke.", '21.jpg', 1922),
+(43, "Eddie", "Jemison", "Estadounidense", "Posee ascendencia irlandesa e italiana. Fue criado en Kenner, Luisiana y asistió a la secundaria católica Archbishop Rummel. Se graduó en la Universidad Estatal de Luisiana. Inició su carrera en el cine en 1996 en la película Schizopolis, donde realizó un papel menor.","43.jpg", 1963),
+(42, "Eddie", "Izzard", "Britanico", "es un comediante y actor de teatro y cine del Reino Unido.",'42.jpg', 1962),
+(150, "Vincent", "Cassel", "Frances", "es un actor, productor y director de cine francés. Es hijo del actor Jean-Pierre Cassel.",'150.jpg', 1966),
+(44, "Ellen", "Barkin", "Estadounidense", "Barkin hizo su debut de interpretación a los 26 años de edad en una producción teatral de Nueva York. Actuó en dos obras más hasta que surgió su oportunidad en el cine al serle ofrecido en 1982 el papel de esposa torpe en la película Diner de Barry Levinson.","44.jpg", 1954),
+(146, "Topher", "Grace", "Estadounidense", "Christopher John Grace (Nueva York; 12 de julio de 1978),​​​ más conocido como Topher Grace, es un actor estadounidense conocido principalmente por interpretar el papel de Eric Forman en la serie de televisión That '70s Show durante 7 temporadas","146.jpg", 1944),
+(66, "Jeroen ", "Krabbé", "Neerlandesa", "es un veterano actor y director neerlandés, más conocido desde mediados de los años 1980 tras participar en dos películas premiadas de Paul Verhoeven con repercusión internacional","66.jpg", 1943),
+(27, "Cherry", "Jones", "Estadounidense", "más conocida por su papel de la presidenta Allison Taylor en 24 y como la Sra. Caldwell en Ocean's Twelve.",'27.jpg', 1956);
+
+
+INSERT INTO generos (cod_genero, genero)
+VALUES
+(8, 'comedia'),
+(19, 'Policíaco');
+
+
+INSERT INTO productoras(cod_productora, productora)
+(18, "Jerry Weintraub Productions"),
+(29, "Section Eight Productions"),
+(43, "Village Roadshow Pictures");
+
+
+
+INSERT INTO peliculas(cod_pelicula,titulo,duracion,sinopsis,portada,trailer,fecha)
+(11, "oceans 11",117,"Tras pasar dos años en la prisión de Nueva Jersey, Danny Ocean acaba de recuperar la libertad, y ahora se dispone a preparar un gran golpe, el mayor de su carrera, uno que incluso parece imposible de dar: robar al mismo tiempo los casinos Bellagio, Mirage y MGM Grand, por una bella suma de 150 millones de dólares como botín. También desea recuperar dicho sea de paso a su amada Tess, que ahora está con Terry Benedict, el propietario de estos tres establecimientos de juego de Las Vegas. Con este propósito, Danny y su amigo Rusty Ryan forman un equipo de diez maleantes maestros en su especialidad. Entre ellos se encuentran Linus Caldwell, el carterista más ágil que existe; Roscoe Means, un experto en explosivos; Reuben Tishkoff, que se conoce al dedillo los sistemas de seguridad de los casinos; los hermanos Virgil y Turk Malloy, capaces de adoptar varias identidades; y para acabar Yen, verdadero contorsionista y acróbata. Juntos forjarán un meditado y calculador plan para hacerse con el botín, y emplearán toda su astucia para que nadie los descubra durante el proceso.","11.jpg","https://www.youtube.com/watch?v=j4QoN1ecD8k","2001"),
+(12, "oceans 12",123,"Han pasado tres años desde que Danny Ocean (George Clooney) y su equipo - liderado por el detallista Rusty Ryan (Brad Pitt), el prometedor carterista Linus Caldwell (Matt Damon), el experto en explosivos Basher Tarr (Don Cheadle) y el desvalijador de cajas fuertes Frank Catton (Bernie Mac) - llevaron a cabo uno de los más audaces y lucrativos atracos de la historia, robando al despiadado empresario Terry Benedict (Andy García) hasta el último centavo que guardaba en su impenetrable cámara acorazada de Las Vegas.Después de repartir los 160 millones de dólares conseguidos, cada uno de los conocidos miembros del equipo de Ocean ha tratado de portarse bien, pasar desapercibido y llevar una vida legal... pero eso ha resultado ser difícil, para disgusto de Tess, la esposa de Danny (Julia Roberts). Cuando alguien rompe la Regla Número Uno y los delata a Benedict, portarse bien deja de ser una opción. Quiere que le devuelvan sus 160 millones de dólares - con intereses - o de lo contrario... Y, como la banda descubre rápidamente, Benedict no es la única persona poderosa del mundo que busca a los Ocean's Eleven...","12.jpg","https://www.youtube.com/watch?v=k5CZa3X4yF4","2004"),
+(13, "oceans thirteen",113,"Danny Ocean (George Clooney) y su banda preparan un ambicioso y arriesgado plan para robar un casino. Su único objetivo, en este caso, es defender a uno de los suyos, que ha sido engañado por Willy Bank (Al Pacino), el despiadado dueño del casino. (FILMAFFINITY)","13.jpg","https://www.youtube.com/watch?v=J7-B5PMmruM","2007");
+
+
+INSERT INTO peliculas_generos(cod_pelicula,cod_genero)
+(11,1),
+(11,8),
+(11,19),
+(12,1),
+(12,8),
+(12,19),
+(13,1),
+(13,8),
+(13,19);
+
+
+
+

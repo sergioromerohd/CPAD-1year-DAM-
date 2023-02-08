@@ -1,0 +1,13 @@
+.barra{
+	background-color: #6e10f4;
+}
+li .link{
+	color: white;
+}
+.btn{
+	margin-top: 15px;
+	background-color: #6e10f4;
+}
+.nav-tabs{
+	border: none !important;
+}

@@ -1,0 +1,18 @@
+CREATE TABLE empleados(
+Cod_empleado int NOT NULL UNIQUE AUTO_INCREMENT,
+Nombre VARCHAR(20),
+Apellidos VARCHAR(50)NOT NULL,
+Direccion VARCHAR(30),
+DNI CHAR(9),
+Mail VARCHAR(50)NOT NULL,
+Telefono VARCHAR(15),
+Fecha_Nacimiento DATE NOT NULL,
+Fecha_alta DATE NOT NULL DEFAULT GETDATE(),
+Sueldo float(6,2) NOT NULL,
+Observaciones VARCHAR(500),
+PRIMARY KEY(Cod_empleado) ,
+);
+ALTER TABLE empleados(
+ADD Nacionalidad VARCHAR(20) DEFAULT 'Spain' AFTER DNI,
+DROP COLUMN observaciones,
+);

@@ -1,0 +1,39 @@
+Realiza el DDL correspondiente a la creación de las tablas grupos, albumes y canciones, siguiendo este modelo relacional:
+
+grupos(cod_grupo, nombre, nacionaliad, biografia)
+
+albumes(cod_album, titulo, fecha, cod_grupo)
+
+canciones(cod_cancion, titulo, duración, num_pista, cod_album)
+
+Se debe mantener la integridad referencial. Si se elimina un grupo,  se deben eliminar sus álbumes y sus canciones.
+
+Entrégalo con la nomenclatura nombre apellidos DDL discoteca.txt
+
+CREATE TABLE grupos (
+	cod_grupo int UNSIGNED,
+	nombre VARCHAR(15), 
+	nacionaliad VARCHAR(20) DEFAULT "No disponible", 
+	biografia VARCHAR(150) ,
+	PRIMARY KEY (cod_grupo)
+)ENGINE=innnoDB;
+
+CREATE TABLE albumes (
+	cod_album int UNSIGNED,
+	titulo VARCHAR(15) NOT NULL, 
+	fecha DATE NOT NULL, 
+	cod_grupo int ,
+	PRIMARY KEY (cod_album),
+	FOREIGN KEY (cod_grupo) REFERENCES grupo(cod_autores) on UPDATE CASCADE on DELETE CASCADE
+)ENGINE=innnoDB;
+
+CREATE TABLE canciones (
+	cod_cancion int UNSIGNED,
+	titulo VARCHAR(15) NOT NULL, 
+	duracion TIME NOT NULL,
+	num_pista smallint NOT NULL, 
+	cod_album int ,
+	PRIMARY KEY (cod_cancion),
+	FOREIGN KEY (cod_album) REFERENCES albumes(cod_album) on UPDATE CASCADE on DELETE CASCADE
+)ENGINE=innnoDB;
+

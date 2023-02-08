@@ -1,0 +1,88 @@
+CREATE TABLE grupos(
+	cod_grupo TINYINT UNSIGNED,
+	nombre VARCHAR(50) NOT NULL,
+	nacionalidad VARCHAR(35) NOT NULL DEFAULT 'No disponible',
+	biografia VARCHAR(500) NOT NULL,
+	PRIMARY KEY (cod_grupo)
+)ENGINE=InnoDB;
+
+CREATE TABLE albumes(
+	cod_album TINYINT UNSIGNED,
+	titulo VARCHAR(50) NOT NULL,
+	fecha YEAR NOT NULL,
+	cod_grupo TINYINT UNSIGNED,
+	PRIMARY KEY(cod_album),
+	fOREIGN KEY (cod_grupo) REFERENCES grupos(cod_grupo) ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE canciones(
+	cod_cancion SMALLINT UNSIGNED,
+	titulo VARCHAR(50) NOT NULL,
+	duracion TIME NOT NULL,
+	num_pista TINYINT UNSIGNED NOT NULL, 
+	cod_album TINYINT UNSIGNED,
+	PRIMARY KEY(cod_cancion),
+	fOREIGN KEY (cod_album) REFERENCES albumes(cod_album) ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=InnoDB;
+
+
+insert into grupos (cod_grupo,nombre,nacionalidad,biografia)
+values(13,"swan fyahbwoy","Madrid","Elán Swan Fernández , más conocido como Fyahbwoy o El chico del fuego, es un artista de dancehall de Madrid, España, y miembro fundador delcolectivo Madrid Dancehall Crew MDC"),
+(14,"Miley Cyrus","Estados Unidos","Miley Ray Cyrus 23 de noviembre de 1992, Franklin, Tennessee, nacida como Destiny Hope Cyrus, es un cantante y compositora pop norteamericana. Miley es hija de una estrella del country, Billy Ray Cyrus. Nació con un defecto en el corazón, lo que causa que tenga en reposo una frecuencia cardíaca anormal.");
+
+
+insert into albumes (cod_album,titulo,fecha,cod_grupo)
+values (25,"BL4QKFY4H","2015",13),
+(26,"INNADIFLAMES","2009",13),
+(27,"iTunes Live from London","2010",14),
+(28,"Can't Be Tamed","2015",14);
+
+
+insert into canciones (cod_cancion,titulo,duracion,num_pista,cod_album)
+values(301,"Al 100%","00:02:12",1,25),
+(302,"Me dicen Fyahbwoy","00:02:03",2,25),
+(303,"1979","00:02:07",3,25),
+(304,"Pull up","00:01:57",4,25),
+(305,"Hablando de weed","00:01:57",5,25),
+(306,"General Fyah","00:02:04",6,25),
+(307,"Tanto por ti","00:02:23",7,25),
+(308,"Hijos de la noche","00:02:15",8,25),
+(309,"El Binghi y el Fyah","00:02:10",9,25),
+(310,"A freaky dem","00:01:53",10,25),
+(311,"Dweet now","00:02:00",11,25),
+(312,"10:00 AM","00:02:14",12,25),
+(313,"Mañana ya veré","00:02:11",13,25),
+(314,"Introbwoy","00:01:15",1,26),
+(315,"Innadiflames","00:02:30",2,26),
+(316,"Reggae liphe","00:01:54",3,26),
+(317,"Fenomenal","00:02:11",4,26),
+(318,"Fuma weed","00:01:45",5,26),
+(319,"A veces","00:02:02",6,26),
+(320,"Fashion victims","00:01:49",7,26),
+(321,"Alianza no trata Pt II","00:01:55",8,26),
+(322,"Malianteria","00:01:46",9,26),
+(323,"Ya te avise","00:01:57",10,26),
+(324,"Isopropanol","00:02:18",11,26),
+(325,"No estamos creyendo","00:03:12",12,26),
+(326,"Nuestros dias","00:02:10",13,26),
+(327,"Politics dem","00:01:56",14,26),
+(328,"«Back To Tennessee»","00:06:06",1,27),
+(329,"Thrillbilly","00:04:23",2,27),
+(330,"See You Again","00:03:42",3,27),
+(331,"7 Things","00:04:05",4,27),
+(332,"Fly on the Wall","00:02:56",5,27),
+(333,"The Climb","00:04:48",6,27),
+(334,"Butterfly Fly Away","00:03:55",7,27),
+(335,"Thrillbilly","00:05:01",8,27),
+(336,"Liberty Walk","00:04:09",1,28),
+(337,"Who Owns My Heart","00:03:33",2,28),
+(338,"Can't Be Tamed","00:02:50",3,28),
+(339,"Every Rose Has Its Thor","00:03:51",4,28),
+(340,"Two More Lonely People","00:03:11",5,28),
+(341,"Forgiveness and Love","00:03:31",6,28),
+(342,"Permanent December","00:03:37",7,28),
+(343,"Stay","00:04:21",8,28),
+(344,"Scars","00:03:43",9,28),
+(345,"Take Me Along","00:04:09",10,28),
+(346,"Robot","00:03:43",11,28),
+(347,"My Heart Beats For Love","00:03:42",12,28);

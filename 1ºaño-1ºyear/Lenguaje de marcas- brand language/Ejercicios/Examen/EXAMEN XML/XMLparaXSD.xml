@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<laliga xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="./XSDparaXML.xsd">
+	<partido>
+		<idpartido>1</idpartido>
+		<equipo>
+			<codclub>1</codclub>
+			<jugadores>
+				<jugador>
+					<idjugador>1</idjugador>
+					<nombre>alberto</nombre>
+					<fec_nac>13/5/1993</fec_nac>
+					<posicion>portero</posicion>
+				</jugador>
+				<jugador>
+					<idjugador>2</idjugador>
+					<nombre>carlos</nombre>
+					<fec_nac>16/12/1997</fec_nac>
+					<posicion>defensa</posicion>
+				</jugador>
+			</jugadores>
+		</equipo>
+		<equipo>
+			<codclub>2</codclub>
+			<jugadores>
+				<jugador>
+					<idjugador>22</idjugador>
+					<nombre>roberto</nombre>
+					<fec_nac>23/11/1997</fec_nac>
+					<posicion>portero</posicion>
+				</jugador>
+				<jugador>
+					<idjugador>23</idjugador>
+					<nombre>wilfredo</nombre>
+					<fec_nac>26/2/1997</fec_nac>
+					<posicion>defensa</posicion>
+				</jugador>
+			</jugadores>
+		</equipo>
+		<fecha>8/4/2022</fecha>
+		<golcasa>0</golcasa>
+		<golfuera>1</golfuera>
+		<goles numero="1">
+			<minuto>35</minuto>
+			<descripcion>remate de cabeza que viene de un cornes tras contra ataque</descripcion>
+		</goles>
+	</partido>
+	<clubes>
+		<club>
+			<codclub>1</codclub>
+			<nombre>pacos FC</nombre>
+			<estadio aforo="10000">la paconeta</estadio>
+			<anofundacion>2000</anofundacion>
+			<ciudad>pamplona</ciudad>
+		</club>
+		<club>
+			<codclub>2</codclub>
+			<nombre>joseadores FC</nombre>
+			<estadio aforo="9000">la baratiña</estadio>
+			<anofundacion>2011</anofundacion>
+			<ciudad>pamplona</ciudad>
+		</club>
+	</clubes>
+	<presidentes>
+		<presidente>
+			<dni>54022289B</dni>
+			<nombre>paco</nombre>
+			<apellido>paquito</apellido>
+			<fec_nac>5/1/1982</fec_nac>
+			<anoelegido>2014</anoelegido>
+			<codclub>1</codclub>
+		</presidente>
+		<presidente>
+			<dni>54022289B</dni>
+			<nombre>paco</nombre>
+			<apellido>paquito</apellido>
+			<fec_nac>5/1/1982</fec_nac>
+			<anoelegido>2014</anoelegido>
+			<codclub>2</codclub>
+		</presidente>
+	</presidentes>
+</laliga>

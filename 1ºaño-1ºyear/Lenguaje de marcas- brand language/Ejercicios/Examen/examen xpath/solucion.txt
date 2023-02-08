@@ -1,0 +1,57 @@
+1. Nombres de los centros de las carreras
+
+	//carreras/carrera/centro
+
+2. Años de plan de estudio de las carreras que sean previas al 2002
+
+	//carreras/carrera[plan<2002]/nombre
+
+3. Apellido de todos los alumnos
+
+	//alumnos/alumno/apellido1
+
+4. Datos de la carrera cuyo id es c03
+
+	//carrera[@id='c03']/*
+
+5. Centros en los que se estudian las carreras cuyo id NO es c02
+
+	//carrera[@id!='c02']/centro
+
+6. Nombre de las carreras que no tengan subdirector
+
+	//carreras/carrera[not(subdirector)]/nombre
+
+7. Códigos de las carreras en las que no haya algún alumno matriculado
+
+	
+
+8. Apellidos y Nombre de los alumnos sin beca
+
+	//alumnos/alumno[not(@beca)]/apellido1
+
+9. Nombre de las asignaturas de primer trimestre
+
+
+	//asignaturas/asignatura[trimestre=1]/nombre
+
+
+10. Código de la carrera que estudia el último alumno
+
+	//alumnos/alumno[last()]/estudios/carrera/@codigo
+
+11. Código de las asignaturas que estudian mujeres
+
+	//alumnos/alumno[sexo='Mujer']/estudios/carrera/@codigo
+
+12. Apellidos de los alumnos que NO estén matriculados en la asignatura a02
+
+	//alumnos/alumno/estudios/asignaturas/asignatura[@codigo='a02']/../../../apellido1
+
+13. Códigos de las carreras que estudian los alumnos matriculados en alguna asignatura
+
+	//alumnos/alumno/estudios/asignaturas[boolean(asignatura)]/../carrera/@codigo
+
+14. Apellidos de todos los hombres
+
+	//alumnos/alumno[sexo='Hombre']/apellido1|//alumnos/alumno[sexo='Hombre']/apellido2

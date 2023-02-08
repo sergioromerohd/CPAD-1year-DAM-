@@ -1,0 +1,39 @@
+1. Canciones que duren más de 3 minutos
+	SELECT titulo FROM canciones 
+	where duracion>"00:03:00";
+
+2. Álbumes de U2
+	SELECT albumes.titulo from albumes, grupos 
+	where grupos.cod_grupo=albumes.cod_grupo AND nombre="U2";
+
+3. Álbumes del género pop
+	SELECT titulo from albumes, albumes_generos, generos 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and genero="pop";
+
+4. Álbumes del género pop de 1980
+	SELECT titulo, fecha from albumes, albumes_generos, generos 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and genero="pop" and fecha=1980;
+
+5. Canciones que pertenezcan a álbumes del género pop, rock o bachata. Hay que indicar a qué álbum pertenece cada canción.
+	select canciones.titulo, genero from albumes, albumes_generos, generos, canciones 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and albumes.cod_album=canciones.cod_album and (genero="pop"or genero="rock" or genero="Bachata");
+
+6. Álbumes de U2 de los años 1980 a 1990
+	SELECT albumes.titulo from albumes, grupos 
+	where grupos.cod_grupo=albumes.cod_grupo AND nombre="U2" AND fecha>=1980 AND fecha<=1990;
+
+7. Álbumes de U2 de los años 1980 a 1990 que pertenezcan al género Pop-Rock
+	SELECT albumes.titulo from albumes, grupos ,albumes_generos, generos 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and grupos.cod_grupo=albumes.cod_grupo AND nombre="U2" AND fecha>=1980 AND fecha<=1990 AND genero="Pop-Rock";
+
+8. Álbumes de U2 de los años 1980 a 1990 (utilizando BETWEEN)
+	SELECT albumes.titulo from albumes, grupos 
+	where grupos.cod_grupo=albumes.cod_grupo AND nombre="U2" AND (fecha between 1980 AND 1990);
+
+9. Álbumes Pop o Rock de U2 y de Queen
+	SELECT titulo from albumes, albumes_generos, generos, grupos 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and grupos.cod_grupo=albumes.cod_grupo and (genero="pop"  or genero="pop") and(nombre="U" OR nombre="Queen");
+
+10. Álbumes Pop o Rock de U2 y de Queen de los años 1980 y 1990
+	SELECT titulo from albumes, albumes_generos, generos, grupos 
+	where albumes.cod_album=albumes_generos.cod_album and albumes_generos.cod_genero=generos.cod_genero and grupos.cod_grupo=albumes.cod_grupo and (genero="pop"  or genero="pop") and(nombre="U" OR nombre="Queen") and (fecha=1980 or fecha=1990);

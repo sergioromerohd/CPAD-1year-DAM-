@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bibleoteca>
+	<libro>
+		<titulo encuadernacion="pasta_dura" idioma="esp">
+			la sombra sobre el banco de piedra
+		</titulo>
+		<autor>maria oripe</autor>
+		<publicacion>1986</publicacion>
+		<fechaprestamo dia="13" mes="mar" year="2016"></fechaprestamo>
+	</libro>
+	<libro>
+		<titulo encuadernacion="pasta_dura" idioma="esp">
+			Nose
+		</titulo>
+		<autor>maria oripe</autor>
+		<publicacion>2001</publicacion>
+		<fechaprestamo dia="13" mes="mar" year="2016"></fechaprestamo>
+	</libro>
+</bibleoteca>
+
+<!-- ejercicio1
+/bibleoteca/libro[last()]/titulo
+
+/bibleoteca/[count(libro)]
+
+ /bibleoteca/libro[publicacion>="2000"]
+
+ /bibleoteca/libro[autor="maria oripe"]/titulo
+ -->
+
+
+ <!-- ejercicio2
+ /agenda/persona/identificadores
+
+ /agenda/persona@id|agenda/persona/identificadores/nombre
+
+ /agenda/persona[@id="p02"]
+ 
+/agenda/persona[last()-1]/identificadores/nombre
+
+/agenda/count(persona)/identificadores/nombre[="Roberto"]
+ -->

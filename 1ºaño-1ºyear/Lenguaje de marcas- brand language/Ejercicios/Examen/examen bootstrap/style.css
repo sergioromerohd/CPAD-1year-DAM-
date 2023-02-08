@@ -1,0 +1,45 @@
+
+.fondo{
+  background-color: #015d45 !important;
+}
+.caras{
+  width: 100px;
+}
+.fs-titulo{
+  font-size: 350%;
+}
+.team{
+  color: #f1b980;
+}
+.link{
+  text-decoration: none;
+}
+.radio{
+  background-color: #015d45;
+}
+    input[type='radio']:after {
+        width: 16px;
+        height: 16px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        
+        top: -1;
+        left: -1;
+    }
+
+    input[type='radio']:checked:after {
+        width: 17px;
+        height: 17px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #015d45;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+       top: -1;
+      left: -1;
+    }

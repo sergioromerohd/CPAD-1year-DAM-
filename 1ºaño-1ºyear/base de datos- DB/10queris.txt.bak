@@ -1,0 +1,12 @@
+10 queris
+
+1-crear la tabla grupo que contenga (cod_grupo,nombre);
+2-crear la tabla album que contenga (cod_album,nombre,cod_autor) que mantenga la integridad referencial.
+3-mostrar cuantos albumes tiene cada autor.
+4-mostrar el album que tiene la cancion mas largaç
+5-mostrar el album con mas canciones
+6-borrar los datos de la tabla autor
+7-insertar en la tabla album, el album "Gloria" del autor con cod _autor 53 
+8-borrar las tuplas en los que un autor tenga menos de 2 albumes 2 no incluidos
+9-borrar la tabla grupo
+10-borrar la tabla album

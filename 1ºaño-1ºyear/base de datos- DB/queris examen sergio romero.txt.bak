@@ -1,0 +1,89 @@
+Eliminar la columna departamento en la tabla empleados.
+
+alter table empleados drop departamento;
+
+Añadir la columna departamento en la tabla empleados después del campo dni. No admite NULL. En caso de no saberla, debe registrar No disponible.
+
+alter table empleados add departamento VARCHAR(50) NOT NULL AFTER dni DEFAULT "No disponible";
+
+Cuántos empleados ganan más de 20000.
+
+SELECT count(cod_empleado) from empleados
+where sueldo>20000;
+
+Listado de empleados que vivan en Madrid, Toledo, Ciudad Real, Cuenca o Guadalajara.
+
+SELECT nombre,apellido,cod_empleado FROM empleados
+WHERE ciudad IN ("Madrid","Toledo","Ciudad Real","Cuenca","guadalajara")
+ORDER BY 1,2,3;
+
+Listado de empleados cuyo apellido comience por H.
+
+select nombre,apellido,cod_empleado FROM empleados
+where apellido LIKE "H%"
+ORDER BY 1,2,3;
+
+Borrar toda la información de la tabla empleados.
+
+DELETE FROM empleados;
+
+Subir el sueldo a todos los empleados que ganen 15000 para que ganen 20000
+
+update empleados SET sueldo=20000
+WHERE sueldo=15000;
+
+Listado que muestre quién es el empleado que más gana.
+
+select nombre,apellido,cod_empleado from empleados
+WHERE sueldo=(SELECT max(sueldo) FROM empleados)
+ORDER BY 1,2,3;
+
+Listado con el gasto total en sueldos por cada departamento de la empresa.
+
+SELECT departamento,SUM(sueldo) from empleados
+GROUP BY 1;
+
+Libros de Juan Ramón Jiménez.
+
+select titulo,cod_titulo from autores libros
+WHERE autores.cod_autor=libros.cod_autor AND nombre="Juan Ramón" AND apellido="jimenez"
+order by 1,2;
+
+El Sr. Antúnez nos pide crear una BBDD para su biblioteca personal. Debe tener información de autores y libros (1:N). Se piden todas las queries necesarias del DDL. Las tablas deben tener los mismos campos que hay en la imagen adjunta. Debes tener en cuenta la siguiente información:
+
+
+La BBDD se llama biblioteca.
+
+No se permiten campos NULL.
+
+
+En caso de ser un autor anónimo o sin apellidos (seudónimo), los apellidos deben registrar ‘’.
+
+En caso de no saber la nacionalidad o el género, debe registrar ‘No disponible’.
+
+Si se desconoce la fecha de nacimiento (fec_nac), debe registrar (9999-12-31)
+
+Debe mantener la integridad referencial.
+
+Si se elimina un autor, se deben eliminar todos los libros de ese autor (hay que especificarlo).
+
+No se permiten autores repetidos (nombre y apellidos iguales).
+
+CREATE DATABASE bibleoteca;
+
+CREATE TABLE autores (
+	cod_autor smallint unsigned,
+	nombre varchar(50) NOT NULL DEFAULT "Anonimo",
+	apellidos varchar(50) NOT NULL DEFAULT "",
+	fec_nac date NOT NULL DEFAULT "9999-12-1",
+	nacionalidad varchar(50) NOT NULL DEFAULT "no disponible",
+	PRIMARY KEY(cod_autor))engine=InnoDB;
+
+create TABLE libros(
+	cod_libro smallint unsigned,
+	titulo VARCHAR(50) NOT NULL,
+	genero VARCHAR(30) NOT NULL DEFAULT "No disponible",
+	cod_autor smallint unsigned,
+	PRIMARY KEY(cod_libro),
+	FOREIGN KEY(cod_autor) REFERENCES autores.cod_autor ON UPDATE CASCADE ON DELETE CASCADE
+)engine=innodb;

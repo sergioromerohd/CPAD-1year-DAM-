@@ -1,0 +1,60 @@
+ddl genero:
+
+CREATE TABLE generos (
+cod_genero TINYINT unsigned,
+genero VARCHAR(30) NOT NULL UNIQUE,
+PRIMARY KEY(cod_genero)
+)engine=InnoDB;
+
+
+
+ddl albumes_genero
+
+CREATE TABLE albumes_geneross(
+cod_album TINYINT unsigned,
+cod_genero TINYINT unsigned,
+PRIMARY KEY(cod_album,cod_genero),
+FOREIGN KEY(cod_album) REFERENCES albumes(cod_album) on DELETE CASCADE on UPDATE CASCADE,
+FOREIGN KEY(cod_genero) REFERENCES generos(cod_genero) on DELETE CASCADE on UPDATE CASCADE
+)engine=InnoDB;
+
+
+
+
+		CREATE TABLE generos (
+		cod_genero TINYINT UNSIGNED,
+		genero VARCHAR(30) UNIQUE NOT NULL,
+		PRIMARY KEY (cod_genero)
+		)ENGINE=InnoDB;
+
+		CREATE TABLE albumes_generos(
+		cod_album TINYINT UNSIGNED,
+		cod_genero TINYINT UNSIGNED,
+		PRIMARY KEY(cod_album, cod_genero),
+		FOREIGN KEY (cod_album) REFERENCES albumes(cod_album) ON UPDATE CASCADE ON DELETE CASCADE,
+		FOREIGN KEY (cod_genero) REFERENCES generos(cod_genero) ON UPDATE CASCADE ON DELETE CASCADE
+		)ENGINE=InnoDB;
+
+
+
+INSERT INTO generos VALUES 
+(1, "Bachata"),
+(2, "Country"),
+(3, "Dancehall"),
+(4, "Dubstep"),
+(5, "Groove metal"),
+(6, "Hard rock"),
+(7, "Hip hop"),
+(8, "Metal alternativo"),
+(9, "Pop"),
+(10, "Pop latino"),
+(11, "Pop punk"),
+(12, "Pop Rock"),
+(13, "Rap"),
+(14, "Rapcore"),
+(15, "Rock alternativo"),
+(16, "Rock and roll"),
+(17, "Rock electrónico"),
+(18, "Thrash metal");
+
+INSERT INTO albumes_generos

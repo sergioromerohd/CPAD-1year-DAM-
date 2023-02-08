@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="laliga">
+        <xs:complextype>
+            <xs:sequence>
+                <xs:element name="partido">
+                    <xs:complextype>
+                        <xs:sequence>
+                            <xs:element name="idpartido" type="xs:integer">
+                            </xs:element>
+                            <xs:element name="equipo">
+                                <xs:complextype>
+                                    <xs:sequence>
+                                        <xs:element name="codclub" type="xs:integer">
+                                        </xs:element>
+                                        <xs:element name="jugadores">
+                                            <xs:complextype>
+                                                <xs:sequence>
+                                                    <xs:element name="jugador">
+                                                        <xs:complextype>
+                                                            <xs:sequence>
+                                                                <xs:element name="idjugador" type="xs:integer">
+                                                                </xs:element>
+                                                                <xs:element name="nombre" type="xs:string">
+                                                                </xs:element>
+                                                                <xs:element name="fec_nac" type="xs:date">
+                                                                </xs:element>
+                                                                <xs:element name="posicion" type="xs:integer">
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complextype>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complextype>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complextype>
+                            </xs:element>
+                            <xs:element name="fecha" type="xs:date">
+                            </xs:element>
+                            <xs:element name="golcasa" type="xs:integer">
+                            </xs:element>
+                            <xs:element name="golfuera" type="xs:integer">
+                            </xs:element>
+                            <xs:element name="goles">
+                                <xs:complextype>
+                                    <xs:sequence>
+                                        <xs:element name="minuto" type="xs:integer">
+                                        </xs:element>
+                                        <xs:element name="descripcion" type="xs:string">
+                                        </xs:element>
+                                    </xs:sequence>
+                                  <xs:attribute name="numero" type="xs:integer" use="required"/>
+                                </xs:complextype>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complextype>
+                </xs:element>
+                <xs:element name="clubes">
+                    <xs:complextype>
+                        <xs:sequence>
+                            <xs:element name="club">
+                                <xs:complextype>
+                                    <xs:sequence>
+                                        <xs:element name="codclub" type="xs:integer">
+                                        </xs:element>
+                                        <xs:element name="nombre" type="xs:string">
+                                        </xs:element>
+                                        <xs:element name="estadio" type="xs:string">
+                                        	<xs:complextype>
+                                        		<xs:simpleContent>
+                                        			<xs:extension base="xs:string">
+                                        				<xs:element name="aforo" type="xs:integer"/>
+                                        			</xs:extension>
+                                        		</xs:simpleContent>
+                                        	</xs:complextype>
+                                        </xs:element>
+                                        <xs:element name="anofundacion" type="xs:integer">
+                                        </xs:element>
+                                        <xs:element name="ciudad" type="xs:string">
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complextype>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complextype>
+                </xs:element>
+                <xs:element name="presidentes">
+                    <xs:complextype>
+                        <xs:sequence>
+                            <xs:element name="presidente">
+                                <xs:complextype>
+                                    <xs:sequence>
+                                        <xs:element name="dni" type="xs:string">
+                                        </xs:element>
+                                        <xs:element name="nombre" type="xs:string">
+                                        </xs:element>
+                                        <xs:element name="apellido" type="xs:string">
+                                        </xs:element>
+                                        <xs:element name="fec_nac" type="xs:date">
+                                        </xs:element>
+                                        <xs:element name="anoelegido" type="xs:integer">
+                                        </xs:element>
+                                        <xs:element name="codclub" type="xs:integer">
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complextype>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complextype>
+                </xs:element>
+            </xs:sequence>
+        </xs:complextype>
+    </xs:element>
+</xs:schema>

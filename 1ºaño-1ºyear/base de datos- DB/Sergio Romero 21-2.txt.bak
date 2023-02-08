@@ -1,0 +1,53 @@
+
+Obtener un listado de empleados que sean de Madrid, Sevilla o Valencia.
+
+	SELECT nombre,apellidos,cod_empleado FROM empleados
+	ORDER BY name apellidos cod_empleado
+	WHERE ciudad="madrid" OR ciudad="sevilla" OR ciudad="valencia";
+
+Obtener un listado de empleados que sean de Madrid y del departamento de informática.
+	
+	SELECT nombre,apellidos,cod_empleado FROM empleados
+	ORDER BY name apellidos cod_empleado
+	WHERE ciudad="madrid" AND departamento="informática";
+
+Obtener un listado de empleados cuyos apellidos comiencen por la letra R
+		
+	SELECT nombre,apellidos,cod_empleado FROM empleados
+	ORDER BY name apellidos cod_empleado
+	WHERE apellidos LIKE "R%";
+
+Obtener un listado de empleados que ganen más de 30000
+
+	SELECT nombre,apellidos,cod_empleado FROM empleados
+	ORDER BY name apellidos cod_empleado
+	WHERE sueldo>30000;
+	
+Obtener un listado de empleados cuyo teléfono sea móvil
+
+	SELECT nombre,apellidos,cod_empleado FROM empleados
+	ORDER BY name apellidos cod_empleado
+	WHERE telefono LIKE "6%";
+	
+Añadir la columna nacionalidad, que no permita valores null y que por defecto guarde No disponible al no indicar ninguna nacionalidad.
+
+	ALTER TABLE empleados
+	ADD nacionalidad NOTNULL DEFAULT "No disponible";
+	
+Borrar la columna nacionalidad.	
+
+	ALTER TABLE empleados
+	DROP nacionalidad;
+	
+Borrar la tabla empleados.
+
+	DROP TABLE empleados;
+	
+Borrar la BBDD.
+
+	DROP DATABASE empresa;
+	
+Contar los empleados del departamento de informática.
+	
+	SELECT count(cod_empleado)as"Departamento de informatica	" FROM empleados
+	WHERE departamento="informatica";

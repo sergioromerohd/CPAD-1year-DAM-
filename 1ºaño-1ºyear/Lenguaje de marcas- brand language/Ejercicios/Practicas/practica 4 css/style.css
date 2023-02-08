@@ -1,0 +1,35 @@
+div{
+	border: 2px solid blue;
+	padding: 2% 0% 2% 0%;
+	margin: 0 auto;
+	border-radius: 7px;
+}
+.pagina {
+	width: 95%;
+	border-radius: 5px !important;
+}
+.cabezera{
+	width: 95%;
+}
+.organizar{
+	border: none !important;
+	padding: 0px !important;
+	width: 95%;
+}
+.izquierda{
+	width: 20%;
+	float: left;
+	padding-top: 25%;
+}
+.derecha{
+	width: 78%;
+	float: right;
+	padding-top: 25%;
+}
+.arreglar{
+	border: none !important;
+	clear: both;
+	padding: 0px !important;
+}
+/*ajustar el contenido en linea y con tamaño automatico 
+display: FLEX;*/

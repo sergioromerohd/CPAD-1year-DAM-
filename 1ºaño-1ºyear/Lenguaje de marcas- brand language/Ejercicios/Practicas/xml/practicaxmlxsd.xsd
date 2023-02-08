@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ControlsanitarioPiscinas">
+    <xs:complextype>
+        <xs:sequence>
+            <xs:element name="instalaciones">
+                <xs:complextype>
+                    <xs:sequence>
+                        <xs:element name="denominacion" type="xs:string">
+                        </xs:element>
+                        <xs:element name="titular" type="xs:string">
+                        </xs:element>
+                        <xs:element name="nif" type="xs:string">
+                        </xs:element>
+                        <xs:element name="domicilio" type="xs:string">
+                        </xs:element>
+                        <xs:element name="municipio" type="xs:string">
+                        </xs:element>
+                        <xs:element name="telefono" type="xs:string">
+                        </xs:element>
+                        <xs:element name="email" type="xs:string">
+                        </xs:element>
+                        <xs:element name="numPiscina">
+                            <xs:complextype>
+                                <xs:sequence>
+                                    <xs:element name="temporada">
+                                        <xs:complextype>
+                                            <xs:sequence>
+                                                <xs:element name="apertura" type="xs:string"/>
+                                                <xs:element name="cierre" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:complextype>
+                                        <xs:attribute name="tipo" type="xs:string"/>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complextype>
+                            <xs:attribute name="num" type="xs:integer"/>
+                        </xs:element>
+                        <xs:element name="piscina">
+                            <xs:complextype>
+                                <xs:sequence>
+                                    <xs:element name="idpiscina" type="xs:integer"/>
+                                    <xs:element name="denominacion" type="xs:string"/>
+                                    <xs:element name="superficie" type="xs:string"/>
+                                    <xs:element name="profundidad" type="xs:string"/>
+                                    <xs:element name="cerramiento" type="xs:string"/>
+                                    <xs:element name="tipopisci" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complextype>
+                        </xs:element>
+                        <xs:element name="piscina">
+                            <xs:complextype>
+                                <xs:sequence>
+                                    <xs:element name="idpiscina" type="xs:integer"/>
+                                    <xs:element name="denominacion" type="xs:string"/>
+                                    <xs:element name="superficie" type="xs:string"/>
+                                    <xs:element name="profundidad" type="xs:string"/>
+                                    <xs:element name="cerramiento" type="xs:string"/>
+                                    <xs:element name="tipopisci" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complextype>
+                        </xs:element>
+                        <xs:element name="inspecciones">
+                            <xs:complextype>
+                                <xs:sequence>
+                                    <xs:element name="inspeccion">
+                                        <xs:complextype>
+                                            <xs:sequence>
+                                                <xs:element name="fecha">
+                                                    <xs:complextype>
+                                                        <xs:sequence>
+                                                            <xs:element name="dia" type="xs:integer"/>
+                                                            <xs:element name="mes" type="xs:integer"/>
+                                                            <xs:element name="ano" type="xs:integer"/>
+                                                        </xs:sequence>
+                                                    </xs:complextype>
+                                                </xs:element>
+                                                <xs:element name="deficiencias">
+                                                    <xs:complextype>
+                                                        <xs:sequence>
+                                                            <xs:element name="sanitarias" type="xs:boolean"/>
+                                                            <xs:element name="higienicos" type="xs:boolean"/>
+                                                            <xs:element name="informacion" type="xs:boolean"/>
+                                                            <xs:element name="quimicos" type="xs:boolean"/>
+                                                            <xs:element name="personal" type="xs:boolean"/>
+                                                        </xs:sequence>
+                                                    </xs:complextype>
+                                                </xs:element>
+                                                <xs:element name="calificacion" type="xs:string"/>
+                                                <xs:element name="vaso">
+                                                    <xs:complextype>
+                                                        <xs:sequence>
+                                                            <xs:element name="deficiencias">
+                                                                <xs:complextype>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="controles" type="xs:boolean"/>
+                                                                        <xs:element name="parametros" type="xs:boolean"/>
+                                                                        <xs:element name="estructurales" type="xs:boolean"/>
+                                                                        <xs:element name="depuracion" type="xs:boolean"/>
+                                                                    </xs:sequence>
+                                                                </xs:complextype>
+                                                            </xs:element>
+                                                            <xs:element name="resultado" type="xs:integer"/>
+                                                            <xs:element name="cierre" type="xs:boolean"/>
+                                                        </xs:sequence>
+                                                    </xs:complextype>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complextype>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complextype>
+                            <xs:attribute name="numero" type="xs:integer"/>
+                            <xs:attribute name="instalacion" type="xs:string"/>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complextype>
+            </xs:element>
+        </xs:sequence>
+    </xs:complextype>
+   </xs:element>
+</xs:schema>

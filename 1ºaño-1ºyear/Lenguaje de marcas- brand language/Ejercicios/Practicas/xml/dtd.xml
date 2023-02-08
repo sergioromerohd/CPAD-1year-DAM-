@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE factura [
+
+<!ELEMENT factura (datos,datosCliente,datosFactura)>
+<!ELEMENT datos (nombre,calle,localidad,codpostal,cif,telefono,fax,fecha,pedido,pago)>
+<!ELEMENT datosCliente (numerocliente,nombrecliente,direccioncliente,poblacion,codpostalcliente,provincia)>
+<!ELEMENT datosFactura (producto,baseimponible,porcientoiva,cuotaiva,total)>
+<!ELEMENT producto (ref,descripcio,cant,precio,iva,importe)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT cif (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT pedido (#PCDATA)>
+<!ELEMENT pago (#PCDATA)>
+<!ELEMENT numerocliente (#PCDATA)>
+<!ELEMENT nombrecliente (#PCDATA)>
+<!ELEMENT direccioncliente (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT codpostalcliente (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT descripcio (#PCDATA)>
+<!ELEMENT cant (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT iva (#PCDATA)>
+<!ELEMENT pago (#PCDATA)>
+<!ELEMENT baseimponible (#PCDATA)>
+<!ELEMENT porcientoiva (#PCDATA)>
+<!ELEMENT cuotaiva (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+]>
+<factura><!-- xmlns="http://www.w3.org/2001/XMLSchema xsi:noNamespaceSchemaLocation="./" -->"
+	<datos>
+		<nombre>Equipos digitales s.l</nombre>
+		<calle>av.valladolid</calle>
+		<localidad>madrid</localidad>
+		<codpostal>28015</codpostal>
+		<cif>Q-9876543</cif>
+		<telefono>917776688</telefono>
+		<fax>917776688</fax>
+		<fecha>12-1-2005</fecha>
+		<pedido>731</pedido>
+		<pago>efectivo</pago>
+	</datos>
+	<datosCliente>
+		<numerocliente>879</numerocliente>
+		<nombrecliente>dario bueno gutierrez</nombrecliente>
+		<direccioncliente>av.oporto 7 4d</direccioncliente>
+		<poblacion>madrid</poblacion>
+		<codpostalcliente>28043</codpostalcliente>
+		<provincia>madrid</provincia>
+	</datosCliente>
+	<datosFactura>
+		<producto>
+			<ref>mi842742</ref>
+			<descripcio>microfono</descripcio>
+			<cant>1</cant>
+			<precio>230</precio>
+			<iva>16</iva>
+			<importe>266,80</importe>
+		</producto>
+		<producto>
+			<ref>mb75e817</ref>
+			<descripcio>placa</descripcio>
+			<cant>1</cant>
+			<precio>180</precio>
+			<iva>16</iva>
+			<importe>208.80</importe>
+		</producto>
+		<producto>
+			<ref>me470279</ref>
+			<descripcio>dimm ddr</descripcio>
+			<cant>2</cant>
+			<precio>40</precio>
+			<iva>16</iva>
+			<importe>92.80</importe>
+		</producto>
+		<producto>
+			<ref>hd73548274</ref>
+			<descripcio>disco duro</descripcio>
+			<cant>4</cant>
+			<precio>120</precio>
+			<iva>16</iva>
+			<importe>556.80</importe>
+		</producto>
+		<baseimponible>970</baseimponible>
+		<porcientoiva>16</porcientoiva>
+		<cuotaiva>155,20</cuotaiva>
+		<total>1125.20</total>
+	</datosFactura>
+</factura>

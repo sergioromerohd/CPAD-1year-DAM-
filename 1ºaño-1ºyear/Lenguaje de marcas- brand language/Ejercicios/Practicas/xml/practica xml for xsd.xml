@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<ControlsanitarioPiscinas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./practicaxmlxsd.xsd">
+		<instalaciones>
+			<denominacion>baños paco</denominacion>
+			<titular>Paco Gerte</titular>
+			<nif>54023288B</nif>
+			<domicilio>calle aladierna, 19</domicilio>
+			<municipio>madrid</municipio>
+			<telefono>696589555</telefono>
+			<email>Pacobaños@gmail.com</email>
+			<numPiscina num="2">
+				<temporada tipo="anual"></temporada>
+				<temporada tipo="trimestral">
+					<apertura>1 junio</apertura>
+					<cierre>1 septiembre</cierre>
+				</temporada>
+			</numPiscina>
+			<piscina>
+				<idpiscina>1</idpiscina>
+				<denominacion>piscinon</denominacion>
+				<superficie>50m*25m</superficie>
+				<profundidad>2,5m</profundidad>
+				<cerramiento>cubierta</cerramiento>
+				<tipopisci>polivalente</tipopisci>
+			</piscina>
+			<piscina>
+				<idpiscina>2</idpiscina>
+				<denominacion>comunidad</denominacion>
+				<superficie>35m*30m</superficie>
+				<profundidad>2,2m</profundidad>
+				<cerramiento>exterior</cerramiento>
+				<tipopisci>recrèo</tipopisci>
+			</piscina>
+			<inspecciones>
+				<inspeccion numero="1" instalacion="baños paco">
+					<fecha>
+						<dia>3</dia>
+						<mes>6</mes>
+						<ano>2021</ano>
+					</fecha>
+					<deficiencias>
+						<sanitarias>0</sanitarias>
+						<higienicos>0</higienicos>
+						<informacion>0</informacion>
+						<quimicos>0</quimicos>
+						<personal>0</personal>
+					</deficiencias>
+					<calificacion>Sin deficiencias</calificacion>
+					<vaso idpiscina="1">
+						<deficiencias>
+							<controles>0</controles>
+							<parametros>0</parametros>
+							<estructurales>0</estructurales>
+							<depuracion>0</depuracion>
+						</deficiencias>
+						<resultado>1</resultado>
+						<cierre>0</cierre>
+					</vaso>
+					<vaso idpiscina="2">
+						<deficiencias>
+							<controles>0</controles>
+							<parametros>0</parametros>
+							<estructurales>0</estructurales>
+							<depuracion>0</depuracion>
+						</deficiencias>
+						<resultado>1</resultado>
+						<cierre>0</cierre>
+					</vaso>
+				</inspeccion>
+			</inspecciones>
+		</instalaciones>
+	</ControlsanitarioPiscinas>
+</xs:schema>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE laliga [
+<!ELEMENT laliga (partido,clubes,presidentes)>
+<!ELEMENT partido (idpartido,equipo,fecha,golcasa,golfuera,goles)>
+<!ELEMENT clubes (club)>
+<!ELEMENT presidentes (presidente)>
+<!ELEMENT idpartido (#PCDATA)>
+<!ELEMENT equipo (codclub,jugadores)>
+<!ELEMENT fecha (#PCDATA)> 
+<!ELEMENT golcasa (#PCDATA)>
+<!ELEMENT golfuera (#PCDATA)>
+<!ELEMENT goles (minuto,descripcion)>
+<!ELEMENT club (codclub,nombre,estadio,anofundacion,ciudad)>
+<!ELEMENT presidente (dni,nombre,apellido,fec_nac,anoelegido,codclub)>
+<!ELEMENT codclub (#PCDATA)>
+<!ELEMENT jugadores (jugador)>
+<!ELEMENT minuto (#PCDATA)>
+<!ELEMENT descrpcion (#PCDATA)>
+<!ELEMENT codclub (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT estadio (#PCDATA)>
+<!ELEMENT anofundacion (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT fec_nac (#PCDATA)>
+<!ELEMENT anoelegido (#PCDATA)>
+<!ELEMENT codclub (#PCDATA)>
+<!ELEMENT jugador (idjugador,nombre,fec_nac,posicion)>
+<!ELEMENT idjugador (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fec_nac (#PCDATA)>
+<!ELEMENT posicion (delantero|centrocampista|defensa|portero)>
+<!ATTLIST goles numero CDATA #REQUIRED>
+<!ATTLIST estadio aforo CDATA #REQUIRED>
+]>
+<laliga>
+	<partido>
+		<idpartido>1</idpartido>
+		<equipo>
+			<codclub>1</codclub>
+			<jugadores>
+				<jugador>
+					<idjugador>1</idjugador>
+					<nombre>alberto</nombre>
+					<fec_nac>13/5/1993</fec_nac>
+					<posicion>portero</posicion>
+				</jugador>
+				<jugador>
+					<idjugador>2</idjugador>
+					<nombre>carlos</nombre>
+					<fec_nac>16/12/1997</fec_nac>
+					<posicion>defensa</posicion>
+				</jugador>
+			</jugadores>
+		</equipo>
+		<equipo>
+			<codclub>2</codclub>
+			<jugadores>
+				<jugador>
+					<idjugador>22</idjugador>
+					<nombre>roberto</nombre>
+					<fec_nac>23/11/1997</fec_nac>
+					<posicion>portero</posicion>
+				</jugador>
+				<jugador>
+					<idjugador>23</idjugador>
+					<nombre>wilfredo</nombre>
+					<fec_nac>26/2/1997</fec_nac>
+					<posicion>defensa</posicion>
+				</jugador>
+			</jugadores>
+		</equipo>
+		<fecha>8/4/2022</fecha>
+		<golcasa>0</golcasa>
+		<golfuera>1</golfuera>
+		<goles numero="1">
+			<minuto>35</minuto>
+			<descripcion>remate de cabeza que viene de un cornes tras contra ataque</descripcion>
+		</goles>
+	</partido>
+	<clubes>
+		<club>
+			<codclub>1</codclub>
+			<nombre>pacos FC</nombre>
+			<estadio aforo="10000">la paconeta</estadio>
+			<anofundacion>2000</anofundacion>
+			<ciudad>pamplona</ciudad>
+		</club>
+		<club>
+			<codclub>2</codclub>
+			<nombre>joseadores FC</nombre>
+			<estadio aforo="9000">la baratiña</estadio>
+			<anofundacion>2011</anofundacion>
+			<ciudad>pamplona</ciudad>
+		</club>
+	</clubes>
+	<presidentes>
+		<presidente>
+			<dni>54022289B</dni>
+			<nombre>paco</nombre>
+			<apellido>paquito</apellido>
+			<fec_nac>5/1/1982</fec_nac>
+			<anoelegido>2014</anoelegido>
+			<codclub>1</codclub>
+		</presidente>
+		<presidente>
+			<dni>54022289B</dni>
+			<nombre>paco</nombre>
+			<apellido>paquito</apellido>
+			<fec_nac>5/1/1982</fec_nac>
+			<anoelegido>2014</anoelegido>
+			<codclub>2</codclub>
+		</presidente>
+	</presidentes>
+</laliga>

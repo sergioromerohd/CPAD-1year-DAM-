@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+F:\Sergio\DAM\1ºaño\programacion\proyectos java\ejercicio\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4226668177.index
+1067094681.index

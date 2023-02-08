@@ -1,0 +1,42 @@
+1Crear la BBDD empresa
+	CREATE TABLE contactos(
+	);
+	
+2ºNombre y apellidos del último contacto (último alfabéticamente)
+	SELECT Nombre, Apellidos FROM Contactos
+	ORDER BY Nombre DESC
+	LIMIT 1;
+	
+3ºNombre y apellidos de los 3 primeros contactos (ordenados alfabéticamente)
+	SELECT Nombre, Apellidos FROM Contactos
+	ORDER BY Nombre 
+	LIMIT 3;
+
+4ºNombre y apellidos del contacto que tenga el teléfono 600123456
+	SELECT Nombre, Apellidos FROM Contactos
+	ORDER BY Nombre
+	WHERE Telefono='600123456';
+	
+5ºCorreo electrónico (mail) de los contactos que se apelliden Pérez López
+	SELECT mail FROM Contactos
+	where apellidos='Perez Lopez';
+	
+6ºNombre y apellidos del segundo grupo de 5 contactos (los segundos 5) por orden alfabético
+	SELECT Nombre, Apellidos FROM Contactos
+	ORDER BY Nombre 
+	LIMIT 5,5; 
+	
+7ºTeléfono de los contactos que se llamen Miguel y de los que se llamen Aurora
+	SELECT Telefono FROM Contactos
+	where Nombre='Miguel'OR Nombre='Aurora';
+	
+8ºAñadir la columna fec_nac (DATE) después del cod_contacto
+	ALTER TABLE Contactos 
+	ADD fec_nac Date AFTER cod_contactos;
+	
+9ºEliminar dicha columna
+	ALTER TABLE contactos
+	DROP fec_nac;
+	
+10ºBorrar la tabla contactos
+	DROP TABLE contactos;

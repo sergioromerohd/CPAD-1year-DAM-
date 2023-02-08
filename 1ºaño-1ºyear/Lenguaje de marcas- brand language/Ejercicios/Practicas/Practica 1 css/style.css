@@ -1,0 +1,34 @@
+/* Css practica1 */
+H1{
+	color:blue ;
+	text-align:center;
+}
+
+table{
+	width:30% ;
+	height:auto;
+	background-color:lightcyan;
+	margin:0 auto;
+	text-align:center;
+	border:2px solid ;
+}
+td{
+	border:2px solid;
+	border-color:black;
+}
+.linea1{
+	color:white;
+	background-color:blue;
+}
+.lineas{
+	text-align: left;
+	color:blue;
+	background:lightcyan;
+}
+.linea2{
+	text-align: left;
+	border-style:dashed ;
+	border-color:lightcyan;
+	color:white;
+	background:red;
+}
